@@ -49,14 +49,14 @@ content:
         caption: 2021 - present
         quote: ML Engineering team
         description: | 
-          Currently working in the Data Science & Innovation ML Engineering team, moving data science workloads to AWS.Currently working in the Data Science & Innovation ML Engineering team, moving data science workloads to AWS.
+          Currently working in the Data Science & Innovation ML Engineering team, moving data science workloads to AWS.
       - layout: left
-        title: KAYAK (Berlin, Germany)
+        title: KAYAK         (Berlin, Germany)
         link: www.kayak.com
         sub_title: Software Engineer | Senior Software Engineer | Engineering Team Lead
         caption: 2015-2021
         quote: >
-          Performance marketing and data analytics
+          Working on performance marketing and data analytics problems
         description: |
           I joined KAYAK as a software engineer working on a new in-house ad bidding application for performance marketing. This expanded
           quickly to become a fully fledged marketing platform, comprising of not just ad bidding for all major marketing platforms, 
@@ -71,7 +71,7 @@ content:
         sub_title: Technology Analyst | Senior Infrastructure Engineer
         caption: 2013-2015
         quote: >
-          Infrastructure division
+          Working in Nomura's infrastructure division
         description: |
           During my time at Nomura I worked on the deployment of Big Data and NoSQL software, notably Hadoop and MongoDB. 
           I was assigned as the organisation's subject matter expert on Hadoop, and led numerous application POCs and deployments.
@@ -85,7 +85,7 @@ content:
         sub_title: Industrial Placement Student 
         caption: 2011-2012
         quote: >
-          Industrial Placement in the Infrastructure divison
+          Industrial Placement in the infrastructure divison
         description: |
           My Industrial Placement at Nomura consisted of two rotations across the Oracle DBA and Web Engineering teams.
           
