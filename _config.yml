@@ -43,29 +43,54 @@ content:
     layout: list
     content:
       - layout: left
-        title: NatWest Group
+        title: NatWest Group (London, UK)
         link: www.natwestgroup.com
         sub_title: Software Engineer (ML Engineering)
         caption: 2015-2021
       - layout: left
-        title: KAYAK
+        title: KAYAK (Berlin, Germany)
         link: www.kayak.com
-        sub_title: Software Engineer/Senior Software Engineer/Engineering Team Lead
+        sub_title: |
+          Software Engineer
+          Senior Software Engineer
+          Engineering Team Lead
         caption: 2015-2021
+        quote: >
+          Performance marketing and data analytics
+        description: |
+          I joined KAYAK as a software engineer working on a new in-house ad bidding application for performance marketing. This expanded
+          quickly to become a fully fledged marketing platform, comprising of not just ad bidding for all major marketing platforms, 
+          but content creation and feed management features. Later, I worked on a new in-house Business Intelligence application, 
+          now used by thousands of users across OpenTable and KAYAK. 
+          By the time I left the company, I was leading a successful engineering team and was responsible for the development of both applications.
+
+          Technologies used: Python, Django, React.js, JavaScript, TypeScript, MySQL, Vertica, Redis, Snowflake, MongoDB, Docker
       - layout: left
-        title: Nomura
+        title: Nomura (London, UK)
         link: www.nomura.com
-        sub_title: Technology Analyst/Senior Infrastructure Engineer
+        sub_title: |
+          Technology Analyst
+          Senior Infrastructure Engineer
         caption: 2013-2015
+        quote: >
+          Infrastructure division
+        description: |
+          During my time at Nomura I worked on the deployment of Big Data and NoSQL software, notably Hadoop and MongoDB. 
+          I was assigned as the organisation's subject matter expert on Hadoop, and led numerous application POCs and deployments.
+          Additionally, I worked on building out a new API framework focused on infrastructure automation. This project became the basis
+          for Nomura's self-serve infrastructure and automated alert remediation.
+
+          Technologies used: Python, Flask, JavaScript, Java, Memcached, MySQL, ActiveMQ, Hadoop (MapR, Cloudera, Hortonworks), Tibco EMS
       - layout: left
-        title: Nomura
+        title: Nomura (London, UK)
         link: www.nomura.com
         sub_title: Industrial Placement Student 
         caption: 2011-2012
-        # quote: >
-        #   Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-        # description: | # this will include new lines to allow paragraphs
-        #     Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+        quote: >
+          Industrial Placement in the Infrastructure divison
+        description: |
+          My Industrial Placement at Nomura consisted of two rotations across the Oracle DBA and Web Engineering teams.
+          
 
   - title: Projects
     layout: list
