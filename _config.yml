@@ -45,15 +45,15 @@ content:
       - layout: left
         title: NatWest Group (London, UK)
         link: www.natwestgroup.com
-        sub_title: Software Engineer (ML Engineering)
+        sub_title: Software Engineer
         caption: 2021 - present
+        quote: ML Engineering team
+        description: | 
+          Currently working in the Data Science & Innovation ML Engineering team, moving data science workloads to AWS.Currently working in the Data Science & Innovation ML Engineering team, moving data science workloads to AWS.
       - layout: left
         title: KAYAK (Berlin, Germany)
         link: www.kayak.com
-        sub_title: |
-          Software Engineer
-          Senior Software Engineer
-          Engineering Team Lead
+        sub_title: Software Engineer | Senior Software Engineer | Engineering Team Lead
         caption: 2015-2021
         quote: >
           Performance marketing and data analytics
@@ -68,9 +68,7 @@ content:
       - layout: left
         title: Nomura (London, UK)
         link: www.nomura.com
-        sub_title: |
-          Technology Analyst
-          Senior Infrastructure Engineer
+        sub_title: Technology Analyst | Senior Infrastructure Engineer
         caption: 2013-2015
         quote: >
           Infrastructure division
