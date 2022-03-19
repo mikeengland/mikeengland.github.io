@@ -92,7 +92,7 @@ content:
   - title: Projects
     layout: list
     content:
-      - layout: top-middle
+      - layout: left
         title: django-setty
         link: github.com/mikeengland/django-setty
         quote: >
