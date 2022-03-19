@@ -60,8 +60,8 @@ content:
         description: |
           I joined KAYAK as a software engineer working on a new in-house ad bidding application for performance marketing. This expanded
           quickly to become a fully fledged marketing platform, comprising of not just ad bidding for all major marketing platforms, 
-          but content creation and feed management features. Later, I worked on a new in-house Business Intelligence application, 
-          now used by thousands of users across OpenTable and KAYAK. 
+          integrating advanced algorithm/model management for data scientists, but also sophisticated content creation and feed management features. 
+          Later, I worked on a new in-house Business Intelligence application, now used by thousands of users across OpenTable and KAYAK. 
           By the time I left the company, I was leading a successful engineering team and was responsible for the development of both applications.
 
           Technologies used: Python, Django, React.js, JavaScript, TypeScript, MySQL, Vertica, Redis, Snowflake, MongoDB, Docker
