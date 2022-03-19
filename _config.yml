@@ -21,7 +21,7 @@ linkedin_username: michaelengland91
 # Additional icon links
 additional_links:
 - title: Medium blog
-  icon: fa-brands fa-medium
+  icon: fab fa-medium
   url: https://medium.com/@michael_england
 
 
