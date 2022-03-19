@@ -98,8 +98,10 @@ content:
         quote: >
           Django-Setty allows you to dynamically change settings inside the Django Admin Console. The app provides both a database and a cache backend for storing and retrieving your settings.
         description: |
-          This was a Django module I worked on as a side project in my spare time!
-      - layout: top-middle
+          This was a neat Django module I worked on as a side project in my spare time.
+          The motivation for building this was handling live configuration inside of Django without using external
+          dependencies such as Zookeeper.
+      - layout: left
         title: PyPika
         link: github.com/kayak/pypika
         quote: >
@@ -107,7 +109,7 @@ content:
         description: |
           I worked on the popular open source PyPika module during my years working for KAYAK. 
           This is used in many projects, both public and private, including some larger frameworks. Netflix [even built a framework on top of it](https://netflixtechblog.com/python-at-netflix-bba45dae649e).
-      - layout: top-middle
+      - layout: left
         title: Fireant
         link: github.com/kayak/fireant
         quote: >
