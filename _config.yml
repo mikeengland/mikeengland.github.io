@@ -49,14 +49,14 @@ content:
         description: |
           This was a Django module I worked on as a side project in my spare time
       - layout: top-middle
-        title: pypika
+        title: PyPika
         link: github.com/kayak/pypika
         quote: >
           PyPika is a Python API for building SQL queries. The motivation behind PyPika is to provide a simple interface for building SQL queries without limiting the flexibility of handwritten SQL. Designed with data analysis in mind, PyPika leverages the builder design pattern to construct queries to avoid messy string formatting and concatenation. It is also easily extended to take full advantage of specific features of SQL database vendors.
         description: |
           I worked on the popular open source PyPika module during my years working for KAYAK. This is used in many projects, both public and private. Netflix [even built a framework on top of it](https://netflixtechblog.com/python-at-netflix-bba45dae649e).
       - layout: top-middle
-        title: fireant
+        title: Fireant
         link: github.com/kayak/fireant
         quote: >
           fireant is a a data analysis tool used for quickly building charts, tables, reports, and dashboards. It defines a schema for configuring metrics and dimensions which removes most of the leg work of writing queries and formatting charts. fireant even works great with Jupyter notebooks and in the Python shell providing quick and easy access to your data.
