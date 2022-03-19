@@ -115,7 +115,7 @@ content:
         quote: >
           fireant is a a data analysis tool used for quickly building charts, tables, reports, and dashboards. It defines a schema for configuring metrics and dimensions which removes most of the leg work of writing queries and formatting charts. fireant even works great with Jupyter notebooks and in the Python shell providing quick and easy access to your data.
         description: |
-          I worked on the open source fireant module during my years working for KAYAK.
+          I worked on the open source Fireant module during my years working for KAYAK.
 
   - title: Education
     layout: list
