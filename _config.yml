@@ -20,12 +20,10 @@ linkedin_username: michaelengland91
 
 # Additional icon links
 # additional_links:
-# - title: itsgoingto.be
-#   icon: fas fa-globe
-#   url: https://www.itsgoingto.be
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
+- title: Medium blog
+  icon: fa-brands fa-medium
+  url: https://medium.com/@michael_england
+
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
@@ -48,6 +46,8 @@ content:
         link: github.com/mikeengland/django-setty
         quote: >
           Django-Setty allows you to dynamically change settings inside the Django Admin Console. The app provides both a database and a cache backend for storing and retrieving your settings.
+        description: |
+          This was a Django module I worked on as a side project in my spare time
       - layout: top-middle
         title: pypika
         link: github.com/kayak/pypika
