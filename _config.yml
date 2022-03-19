@@ -34,10 +34,10 @@ linkedin_username: michaelengland91
 # google_analytics: "UA-00000000-0"
 
 # About Section
-# about_title: About Me
+about_title: About Me
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Mike. I'm a Software Engineer with 10+ years of experience across multiple different industries. During this time I have worked as both an individual contributor and have managed Engineering teams. I have experience building large scale applications, working across front-end and back-end technology stacks. I also have DevOps experience, building out big data and cloud infrastructure for a variety of use cases.
+about_content: |
+  Hi, my name's Mike. I'm a software engineer with 10+ years of experience across multiple different industries. During this time I have worked as both an individual contributor and have managed engineering teams. I have experience building large scale applications, working across front-end and back-end technology stacks. I also have DevOps/platform engineering experience, building out big data and cloud infrastructure for a variety of use cases.
 
 content:
   - title: Projects
@@ -48,6 +48,20 @@ content:
         link: github.com/mikeengland/django-setty
         quote: >
           Django-Setty allows you to dynamically change settings inside the Django Admin Console. The app provides both a database and a cache backend for storing and retrieving your settings.
+      - layout: top-middle
+        title: pypika
+        link: github.com/kayak/pypika
+        quote: >
+          PyPika is a Python API for building SQL queries. The motivation behind PyPika is to provide a simple interface for building SQL queries without limiting the flexibility of handwritten SQL. Designed with data analysis in mind, PyPika leverages the builder design pattern to construct queries to avoid messy string formatting and concatenation. It is also easily extended to take full advantage of specific features of SQL database vendors.
+        description: |
+          I worked on the popular open source PyPika module during my years working for KAYAK. This is used in many projects, both public and private. Netflix [even built a framework on top of it](https://netflixtechblog.com/python-at-netflix-bba45dae649e).
+      - layout: top-middle
+        title: fireant
+        link: github.com/kayak/fireant
+        quote: >
+          fireant is a a data analysis tool used for quickly building charts, tables, reports, and dashboards. It defines a schema for configuring metrics and dimensions which removes most of the leg work of writing queries and formatting charts. fireant even works great with Jupyter notebooks and in the Python shell providing quick and easy access to your data.
+        description: |
+          I worked on the open source fireant module during my years working for KAYAK.
 
   # - title: Experience
   #   layout: list
@@ -70,19 +84,16 @@ content:
         caption: 2009 - 2013
         sub_title: BSc Computing and Management
         description: |
-          I achieved a First Class Honours degree in Computing and Management and a Diploma in Professional Studies.I achieved a First Class Honours degree in Computing and Management and a Diploma in Professional Studies.
+          I achieved a First Class Honours degree in Computing and Management and a Diploma in Professional Studies.
 
   # - title: A Little More About Me
   #   layout: text
   #   content: |
-  #     Alongside my interests in networks and software engineering some of my other interests and hobbies are:
+  #     Alongside my interests in software engineering some of my other interests and hobbies are:
   #     - Rock climbing
   #     - Gaming
   #     - Knitting
   #     - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
-
-  #     Look at this cool image  
-  #     ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
 
 # Footer
 footer_show_references: true
