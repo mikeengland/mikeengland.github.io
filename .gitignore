@@ -33,6 +33,7 @@ pnpm-debug.log*
 # VS Code
 .vscode/
 !.vscode/extensions.json
+.history/
 
 # Vim / Emacs swap files
 *.swp
