@@ -1,0 +1,80 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_AUTHOR } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About — ${SITE_AUTHOR}`} description={`About ${SITE_AUTHOR}`} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="page-header">
+				<span class="section-label">About</span>
+				<h1>{SITE_AUTHOR}</h1>
+				<p class="subtitle">Software Engineer · Writer · Builder</p>
+			</div>
+
+			<div class="prose about-content">
+				<p>
+					Hi! I'm Mike — a software engineer based in London.
+				</p>
+
+				<h2>What I do</h2>
+				<p>
+				My career has focused on building data and AI systems across the travel and financial services sectors. 
+				I began my career at Nomura in London, developing big data infrastructure, 
+				before moving to Berlin to spend several years engineering advertising and data visualization systems at KAYAK. 
+				Currently, I work on AI/ML infrastructure and applications at NatWest Group.
+				</p>
+
+				<h2>Outside work</h2>
+				<p>
+					When I'm not at a keyboard, I like to play golf, explore the countryside and occasionally pick up my guitar!
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 700px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 3em 1em;
+	}
+
+	.page-header {
+		margin-bottom: 2.5em;
+		padding-bottom: 2em;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.page-header h1 {
+		font-size: 2.25em;
+		margin: 0.2em 0 0.3em 0;
+	}
+
+	.subtitle {
+		color: rgb(var(--gray));
+		font-size: 1em;
+		margin: 0;
+	}
+
+	.about-content h2 {
+		font-size: 1.25em;
+		margin: 2em 0 0.5em 0;
+		color: rgb(var(--black));
+	}
+
+	.about-content p {
+		color: rgb(var(--gray-dark));
+		line-height: 1.8;
+	}
+</style>

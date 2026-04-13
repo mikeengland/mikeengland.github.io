@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body class="bg-slate-50">
+		<Header />
+
+		<!-- Post header: full-width gradient banner -->
+		<div class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 py-16 sm:py-20 overflow-hidden">
+			<!-- Radial blue glow -->
+			<div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse 80% 55% at 50% -10%, rgba(37,99,235,0.4) 0%, transparent 65%)"></div>
+			<!-- Subtle dot grid -->
+			<div class="absolute inset-0 pointer-events-none opacity-[0.035]" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 28px 28px;"></div>
+			<div class="relative max-w-3xl mx-auto">
+				<p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
+					<FormattedDate date={pubDate} />
+					{updatedDate && (
+						<span class="text-slate-400 font-normal normal-case tracking-normal ml-2 italic">
+							&middot; Updated <FormattedDate date={updatedDate} />
+						</span>
+					)}
+				</p>
+				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 bg-gradient-to-r from-white via-blue-50 to-blue-200 bg-clip-text text-transparent">
+					{title}
+				</h1>
+				{description && (
+					<p class="text-slate-300 text-lg leading-relaxed max-w-2xl">{description}</p>
+				)}
+			</div>
+		</div>
+
+		<!-- Hero image (if present) -->
+		{heroImage && (
+			<div class="relative z-10 max-w-4xl mx-auto px-6 -mt-12">
+				<Image
+					width={1020}
+					height={510}
+					src={heroImage}
+					alt=""
+					class="rounded-2xl shadow-2xl w-full"
+				/>
+			</div>
+		)}
+
+		<!-- Article prose -->
+		<article class="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+			<div class="prose prose-slate prose-lg max-w-none
+				prose-headings:font-bold prose-headings:text-slate-900
+				prose-a:text-blue-600 prose-a:font-medium
+				prose-code:text-slate-800 prose-code:bg-slate-100 prose-code:rounded prose-code:px-1.5 prose-code:py-0.5 prose-code:text-[0.875em] prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
+				prose-pre:bg-slate-900 prose-pre:shadow-lg prose-pre:rounded-xl
+				prose-blockquote:border-blue-500 prose-blockquote:text-slate-500 prose-blockquote:not-italic
+				prose-img:rounded-xl prose-img:shadow-md
+				prose-hr:border-slate-200">
+				<slot />
+			</div>
+		</article>
+
+		<Footer />
+	</body>
+</html>

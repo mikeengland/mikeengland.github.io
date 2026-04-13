@@ -1,0 +1,581 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`CV — ${SITE_AUTHOR}`} description={`Curriculum vitae for ${SITE_AUTHOR}`} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<!-- CV Header -->
+			<div class="cv-header">
+				<div class="cv-header-text">
+					<h1>{SITE_AUTHOR}</h1>
+					<p class="cv-role">Lead Software Engineer</p>
+					<div class="cv-contact">
+						{LINKEDIN_URL && <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn</a>}
+						{GITHUB_URL && <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>}
+						<span>London, United Kingdom</span>
+					</div>
+				</div>
+				<button class="btn btn-secondary print-btn" onclick="window.print()">
+					<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true">
+						<path fill="currentColor" d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M5 1a1 1 0 0 0-1 1v1H1.5a1.5 1.5 0 0 0-1.5 1.5v8A1.5 1.5 0 0 0 1.5 14H3v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1.5a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11V2a1 1 0 0 0-1-1zm3 11H4v-2h8v2H8zm0-5H4V5h8v2H8zM3 3V2h10v1H3z"/>
+					</svg>
+					Print / PDF
+				</button>
+			</div>
+
+			<!-- Summary -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Summary</h2>
+				<p>
+					Lead software engineer with experience across multiple industries and countries, working as both an individual contributor and engineering team manager.
+					Specialises in building large-scale applications and cloud infrastructure.
+					Currently working at NatWest Group in London, focused on building and launching large-scale GenAI solutions into production.
+				</p>
+			</section>
+
+			<!-- Experience -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Experience</h2>
+
+				<!-- NatWest Group -->
+				<div class="cv-employer">
+					<div class="cv-employer-header">
+						<h3 class="cv-employer-name">NatWest Group</h3>
+						<span class="cv-employer-tenure">Sep 2021 – Present &middot; Full-time &middot; London</span>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Lead Software Engineer — Applied AI</p>
+							</div>
+							<span class="cv-item-date">May 2024 – Present</span>
+						</div>
+						<ul>
+							<li>Lead the engineering effort of a new application using GenAI to analyse and provide recommendations for marketing communications, ensuring alignment with regulatory guidelines and NatWest's tone of voice.</li>
+							<li>Led the implementation of a RAG system for a public NatWest GenAI chatbot - now available to millions of customers.</li>
+							<li>Deployed a new solution to automate customer onboarding checks - now live and in use by an Onboarding team.</li>
+							<li>Currently building foundational AI services to support delivery of AI solutions across NatWest.</li>
+							<li>Founding member of the Python language guild and <a href="https://nwg.ai" target="_blank" rel="noopener noreferrer">public engineering blog</a> committee member.</li>
+						</ul>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Senior Software Engineer — Applied AI</p>
+							</div>
+							<span class="cv-item-date">Dec 2022 – May 2024</span>
+						</div>
+						<ul>
+							<li>Led the engineering effort to add Generative AI via a RAG architecture to NatWest's colleague chatbot Ask Archie, now scaled across the whole organisation. Co-authored <a href="https://nwg.ai/from-rag-to-riches-how-natwest-is-using-genai-to-unlock-knowledge-across-the-organisation-bda931e2d68a" target="_blank" rel="noopener noreferrer">From RAG to Riches</a> on the NatWest Engineering Blog on this topic.</li>
+							<li>Technical lead for a GenAI guardrails microservice, now deployed in production.</li>
+							<li>Developed and deployed LLM APIs on SageMaker for use by client applications.</li>
+							<li>Built training and inferencing ML pipelines on SageMaker, orchestrated by Airflow (MWAA).</li>
+							<li>Worked with central engineering teams to scale Python across the organisation: standardised CI/CD templates, package hosting, and templated projects.</li>
+						</ul>
+						<p class="cv-item-note">Certification achieved: Certified Kubernetes Application Developer (CKAD)</p>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Senior Software Engineer — ML Engineering / MLOps Platform</p>
+							</div>
+							<span class="cv-item-date">Sep 2021 – Nov 2022</span>
+						</div>
+						<ul>
+							<li>Built NatWest's Kepler platform — a greenfield data science and ML platform on AWS enabling teams to build and deploy models at scale, with infrastructure deployed via Terraform and CloudFormation. Co-authored an <a href="https://aws.amazon.com/blogs/machine-learning/part-2-how-natwest-group-built-a-secure-compliant-self-service-mlops-platform-using-aws-service-catalog-and-amazon-sagemaker/" target="_blank" rel="noopener noreferrer">AWS Machine Learning Blog post</a> about this work.</li>
+							<li>Platform services: SageMaker, S3, Lambda, API Gateway, Service Catalog, EC2, ECR, CodePipeline, CodeBuild, MWAA and more.</li>
+							<li>Built an internal Python package abstracting common SageMaker functionality, now used by all projects on the platform.</li>
+							<li>Built an internal web application for running Kaggle-style ML competitions across the organisation.</li>
+						</ul>
+						<p class="cv-item-note">Certification achieved: AWS Solutions Architect Associate</p>
+					</div>
+				</div>
+
+				<!-- KAYAK -->
+				<div class="cv-employer">
+					<div class="cv-employer-header">
+						<h3 class="cv-employer-name">KAYAK</h3>
+						<span class="cv-employer-tenure">Nov 2015 – Sep 2021</span>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Engineering Team Lead</p>
+							</div>
+							<span class="cv-item-date">Oct 2019 – Sep  &middot; Berlin/London</span>
+						</div>
+						<ul>
+							<li>Led development of two large internal applications: KAYAK's Performance Marketing platform and in-house Business Intelligence platform.</li>
+							<li>Managed a team of four software engineers, owning the technical roadmap, product backlog, development sprints and project planning.</li>
+							<li>Worked closely with Product Management, Marketing Leadership, Data Science and other Engineering Managers to shape product strategy.</li>
+						</ul>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Senior Software Engineer</p>
+							</div>
+							<span class="cv-item-date">Jul 2018 – Oct 2019 &middot; Berlin</span>
+						</div>
+						<ul>
+							<li>Led the expansion of KAYAK's Performance Marketing ad-bidding engine to support eight different marketing platforms, replacing off-the-shelf and agency solutions with significant cost savings.</li>
+							<li>Led a large re-architecture of the ad-bidding engine, encompassing algorithm lifecycle management, versioning and containerisation via Docker.</li>
+							<li>Worked on building out KAYAK's data analytics/BI application for use by external partners.</li>
+						</ul>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Software Engineer</p>
+							</div>
+							<span class="cv-item-date">Nov 2015 – Jun 2018 &middot; Berlin</span>
+						</div>
+						<ul>
+							<li>Technical lead of KAYAK's automated ad-bidding system, responsible for hundreds of millions of dollars of marketing spend per year.</li>
+							<li>Developer on a new in-house Business Intelligence tool, now used by thousands of users.</li>
+							<li>Open source contributor to <a href="https://github.com/kayak/fireant" target="_blank" rel="noopener noreferrer">Fireant</a> (data visualisation) and <a href="https://github.com/kayak/pypika" target="_blank" rel="noopener noreferrer">PyPika</a> (SQL query builder).</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Nomura -->
+				<div class="cv-employer">
+					<div class="cv-employer-header">
+						<h3 class="cv-employer-name">Nomura</h3>
+						<span class="cv-employer-tenure">Sep 2013 – Nov 2015 &middot; London</span>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Technology Analyst / Senior Infrastructure Engineer</p>
+							</div>
+						</div>
+						<ul>
+							<li>Hadoop SME — engineered MapR for production deployment, held training courses, and led installation, benchmarking and destructive testing for a POC.</li>
+							<li>Developed automation APIs in Python (Flask) and Java, including self-service workflows to remediate monitoring alerts without human intervention.</li>
+							<li>Built a self-service internal-cloud portal for automated provisioning of MySQL and TIBCO EMS infrastructure.</li>
+							<li>Developed Spark jobs for data transformation and led large-scale data archival from MSSQL to Hadoop (Hive, Spark, Drill).</li>
+							<li>Built Splunk dashboards for data visualisation.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Nomura Industrial Placement -->
+				<div class="cv-employer">
+					<div class="cv-employer-header">
+						<h3 class="cv-employer-name">Nomura <span class="cv-employer-sub">(Industrial Placement)</span></h3>
+						<span class="cv-employer-tenure">Jun 2011 – Jun 2012 &middot; London</span>
+					</div>
+
+					<div class="cv-item">
+						<div class="cv-item-header">
+							<div>
+								<p class="cv-item-title">Technology Analyst</p>
+							</div>
+						</div>
+						<ul>
+							<li>Oracle DBA rotation: developed Oracle 10g/11g skills, provided user support, and built a PHP web tool for viewing database statistics on Nomura's structured equity derivatives trading platform.</li>
+							<li>Web Technology rotation: contributed to a global IE8 deployment project, managed Splunk monitoring and JIRA analysis, and coordinated DR scheduling for Web Services.</li>
+							<li>Collaborated regularly with colleagues across London, Japan, India and the US.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Education</h2>
+
+				<div class="cv-item">
+					<div class="cv-item-header">
+						<div>
+							<h3 class="cv-item-title">Computing and Management (BSc Hons) — First Class Honours</h3>
+							<p class="cv-item-org">Loughborough University &middot; Including Diploma in Professional Studies</p>
+						</div>
+						<span class="cv-item-date">2009 – 2013</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Certifications -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Certifications</h2>
+
+				<div class="cv-item">
+					<div class="cv-item-header">
+						<div>
+							<h3 class="cv-item-title">Certified Kubernetes Application Developer (CKAD)</h3>
+							<p class="cv-item-org">Cloud Native Computing Foundation</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cv-item">
+					<div class="cv-item-header">
+						<div>
+							<h3 class="cv-item-title">AWS Solutions Architect — Associate</h3>
+							<p class="cv-item-org">Amazon Web Services</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Skills</h2>
+				<p class="cv-item-org">Below is a non-exhaustive list of technologies I have used during my various job roles.</p>
+				<br />
+				<div class="skills-grid">
+					<div class="skill-group">
+						<h4>Languages</h4>
+						<div class="badge-list">
+							<span class="badge">Python</span>
+							<span class="badge">Java</span>
+							<span class="badge">TypeScript</span>
+							<span class="badge">JavaScript</span>
+							<span class="badge">SQL</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Frameworks/Libraries</h4>
+						<div class="badge-list">
+							<span class="badge">Django</span>
+							<span class="badge">FastAPI</span>
+							<span class="badge">Spring Boot</span>
+							<span class="badge">React.js</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>AI / ML</h4>
+						<div class="badge-list">
+							<span class="badge">Amazon SageMaker</span>
+							<span class="badge">OpenAI</span>
+							<span class="badge">Amazon Bedrock</span>
+							<span class="badge">Amazon Bedrock Guardrails</span>
+							<span class="badge">Google Gemini</span>
+							<span class="badge">Self-hosted LLMs</span>
+							<span class="badge">RAG</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Infrastructure</h4>
+						<div class="badge-list">
+							<span class="badge">AWS</span>
+							<span class="badge">Docker</span>
+							<span class="badge">Kubernetes</span>
+							<span class="badge">Terraform</span>
+							<span class="badge">Airflow</span>
+							<span class="badge">GitLab</span>
+						</div>
+					</div>
+					<div class="skill-group">
+						<h4>Databases</h4>
+						<div class="badge-list">
+							<span class="badge">PostgreSQL</span>
+							<span class="badge">MySQL</span>
+							<span class="badge">MongoDB</span>
+							<span class="badge">Redis</span>
+							<span class="badge">Vertica</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Writing -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Writing</h2>
+
+				<div class="cv-item">
+					<div class="cv-item-header">
+						<div>
+							<h3 class="cv-item-title">
+								<a href="https://nwg.ai/from-rag-to-riches-how-natwest-is-using-genai-to-unlock-knowledge-across-the-organisation-bda931e2d68a" target="_blank" rel="noopener noreferrer">
+									From RAG to Riches: How NatWest is Using GenAI to Unlock Knowledge Across the Organisation
+								</a>
+							</h3>
+							<p class="cv-item-org">NatWest Group Engineering Blog</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cv-item">
+					<div class="cv-item-header">
+						<div>
+							<h3 class="cv-item-title">
+								<a href="https://aws.amazon.com/blogs/machine-learning/part-2-how-natwest-group-built-a-secure-compliant-self-service-mlops-platform-using-aws-service-catalog-and-amazon-sagemaker/" target="_blank" rel="noopener noreferrer">
+									How NatWest Group Built a Secure, Compliant Self-Service MLOps Platform Using AWS Service Catalog and Amazon SageMaker
+								</a>
+							</h3>
+							<p class="cv-item-org">AWS Machine Learning Blog</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 800px;
+		max-width: calc(100% - 2em);
+		margin: 0 auto;
+		padding: 3em 1em;
+	}
+
+	/* CV Header */
+	.cv-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1.5em;
+		padding-bottom: 2em;
+		border-bottom: 2px solid rgb(var(--black));
+		margin-bottom: 2.5em;
+		flex-wrap: wrap;
+	}
+
+	.cv-header h1 {
+		font-size: 2.25em;
+		margin: 0 0 0.15em 0;
+	}
+
+	.cv-role {
+		font-size: 1.05em;
+		color: var(--accent);
+		font-weight: 600;
+		margin: 0 0 0.75em 0;
+	}
+
+	.cv-contact {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em 1.25em;
+		font-size: 0.875em;
+		color: rgb(var(--gray));
+	}
+
+	.cv-contact a {
+		color: rgb(var(--gray));
+		text-decoration: none;
+	}
+
+	.cv-contact a:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+
+	.print-btn {
+		flex-shrink: 0;
+		font-size: 0.875em;
+	}
+
+	/* Sections */
+	.cv-section {
+		margin-bottom: 2.5em;
+	}
+
+	.cv-section-title {
+		font-size: 0.75em;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin: 0 0 1.25em 0;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.cv-section > p {
+		color: rgb(var(--gray-dark));
+		line-height: 1.8;
+		margin: 0;
+	}
+
+	/* Employer grouping */
+	.cv-employer {
+		margin-bottom: 2em;
+		padding-left: 0;
+	}
+
+	.cv-employer:last-child {
+		margin-bottom: 0;
+	}
+
+	.cv-employer-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 1em;
+		margin-bottom: 0.75em;
+		flex-wrap: wrap;
+	}
+
+	.cv-employer-name {
+		font-size: 1.05em;
+		font-weight: 700;
+		margin: 0;
+		color: rgb(var(--black));
+	}
+
+	.cv-employer-sub {
+		font-size: 0.85em;
+		font-weight: 400;
+		color: rgb(var(--gray));
+	}
+
+	.cv-employer-tenure {
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+
+	.cv-employer .cv-item {
+		margin-bottom: 1.25em;
+		padding-left: 1em;
+		border-left: 2px solid var(--border);
+	}
+
+	.cv-employer .cv-item:last-child {
+		margin-bottom: 0;
+	}
+
+	/* CV Items */
+	.cv-item {
+		margin-bottom: 1.75em;
+	}
+
+	.cv-item:last-child { margin-bottom: 0; }
+
+	.cv-item-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 1em;
+		margin-bottom: 0.5em;
+		flex-wrap: wrap;
+	}
+
+	.cv-item-title {
+		font-size: 1em;
+		font-weight: 700;
+		margin: 0 0 0.2em 0;
+		color: rgb(var(--black));
+	}
+
+	.cv-item-title a {
+		color: rgb(var(--black));
+		text-decoration: none;
+	}
+
+	.cv-item-title a:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+
+	.cv-item-org {
+		font-size: 0.875em;
+		color: rgb(var(--gray));
+		margin: 0;
+	}
+
+	.cv-item-date {
+		font-size: 0.85em;
+		color: rgb(var(--gray));
+		white-space: nowrap;
+		flex-shrink: 0;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.cv-item ul {
+		margin: 0.5em 0 0 0;
+		padding-left: 1.25em;
+	}
+
+	.cv-item li {
+		font-size: 0.9em;
+		color: rgb(var(--gray-dark));
+		margin-bottom: 0.35em;
+		line-height: 1.6;
+	}
+
+	.cv-item li a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.cv-item li a:hover {
+		text-decoration: underline;
+	}
+
+	.cv-item-tech {
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+		margin: 0.6em 0 0 0;
+		line-height: 1.6;
+		font-style: italic;
+	}
+
+	.cv-item-note {
+		font-size: 0.8em;
+		color: rgb(var(--gray));
+		margin: 0.6em 0 0 0;
+		line-height: 1.6;
+	}
+
+	/* Skills */
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 1.5em;
+	}
+
+	.skill-group h4 {
+		font-size: 0.8em;
+		font-weight: 700;
+		color: rgb(var(--gray));
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin: 0 0 0.6em 0;
+	}
+
+	.badge-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4em;
+	}
+
+	/* Print styles */
+	@media print {
+		header, footer, .print-btn { display: none !important; }
+		main { padding: 0; max-width: 100%; }
+		body { background: white; font-size: 11pt; }
+		.cv-header { border-bottom-color: #000; }
+		a { color: inherit; text-decoration: none; }
+		.cv-employer .cv-item { border-left-color: #ccc; }
+	}
+
+	@media (max-width: 600px) {
+		.cv-item-header { flex-direction: column; gap: 0.2em; }
+		.cv-employer-header { flex-direction: column; gap: 0.2em; }
+		.skills-grid { grid-template-columns: 1fr 1fr; }
+	}
+</style>
