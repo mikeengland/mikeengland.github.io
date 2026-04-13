@@ -1,13 +1,43 @@
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+# Astro build output
+site/dist/
+site/.astro/
+
+# Dependencies
+node_modules/
+site/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Lock files (keep site/package-lock.json, ignore stray root one)
+/package-lock.json
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# Local History for Visual Studio Code
-.history/
+# JetBrains IDEs (PyCharm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
 
-# Built Visual Studio Code Extensions
-*.vsix
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Vim / Emacs swap files
+*.swp
+*.swo
+*~
+
+# Thumbnail cache
+Thumbs.db
