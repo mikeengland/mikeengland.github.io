@@ -75,11 +75,11 @@ const posts = (await getCollection('blog'))
 							<p class="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3 m-0">
 								<FormattedDate date={post.data.pubDate} />
 							</p>
-							<h2 class="font-bold text-slate-900 text-base leading-snug mb-2 group-hover:text-blue-700 transition-colors duration-150">
+							<h2 class="font-bold text-slate-900 text-base leading-snug mb-2 group-hover:text-blue-700 transition-colors duration-150 break-words">
 								{post.data.title}
 							</h2>
 							{post.data.description && (
-								<p class="text-slate-400 text-sm leading-relaxed line-clamp-3 m-0">
+								<p class="text-slate-400 text-sm leading-relaxed line-clamp-3 m-0 break-words">
 									{post.data.description}
 								</p>
 							)}
