@@ -67,7 +67,7 @@ const posts = (await getCollection('blog'))
 				{posts.map((post) => (
 					<a
 						href={`/blog/${post.id}/`}
-						class="group relative block bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 no-underline hover:no-underline overflow-hidden"
+						class="group relative block w-full min-w-0 bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 no-underline hover:no-underline overflow-hidden"
 					>
 						<!-- Gradient wash on hover -->
 						<div class="absolute inset-0 bg-gradient-to-br from-blue-50/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"></div>
