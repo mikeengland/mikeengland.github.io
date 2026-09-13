@@ -1,0 +1,23 @@
+---
+interface Props {
+	name: string;
+	tenure: string;
+	sub?: string;
+}
+
+const { name, tenure, sub } = Astro.props;
+---
+
+<div class="mb-8 last:mb-0">
+	<div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5 mb-3">
+		<h3 class="text-[1.05em] font-bold text-slate-900 m-0">
+			{name}
+			{sub && <span class="text-[0.85em] font-normal text-slate-500">({sub})</span>}
+		</h3>
+		<span class="text-[0.8em] text-slate-500 whitespace-nowrap shrink-0">{tenure}</span>
+	</div>
+	<!-- Each role sits on its own left rule -->
+	<div class="space-y-5 [&>*]:border-l-2 [&>*]:border-slate-200 [&>*]:pl-4 print:[&>*]:border-[#ccc]">
+		<slot />
+	</div>
+</div>
