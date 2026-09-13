@@ -2,7 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_AUTHOR } from '../consts';
+import { SITE_AUTHOR, SITE_ROLE } from '../consts';
+import { EXTERNAL_POSTS } from '../data/external-posts';
 ---
 
 <!doctype html>
@@ -16,21 +17,37 @@ import { SITE_AUTHOR } from '../consts';
 			<div class="page-header">
 				<span class="section-label">About</span>
 				<h1>{SITE_AUTHOR}</h1>
-				<p class="subtitle">Software Engineer · Writer · Builder</p>
+				<p class="subtitle">{SITE_ROLE} · London</p>
 			</div>
 
 			<div class="prose about-content">
 				<p>
-					Hi! I'm Mike — a software engineer based in London.
+					Hi! I'm Mike — a lead software engineer based in London, currently working on AI/ML applications and infrastructure at NatWest Group.
 				</p>
 
 				<h2>What I do</h2>
 				<p>
-				My career has focused on building data and AI systems across the travel and financial services sectors. 
-				I began my career at Nomura in London, developing big data infrastructure, 
-				before moving to Berlin to spend several years engineering advertising and data visualization systems at KAYAK. 
-				Currently, I work on AI/ML infrastructure and applications at NatWest Group.
+					My career has focused on building data and AI systems across the travel and financial services sectors.
+					I began my career at Nomura in London, developing big data infrastructure,
+					before moving to Berlin to spend several years engineering advertising and data visualisation systems at KAYAK.
+					Since 2021 I have been at NatWest Group, first building the bank's ML platform on AWS and more recently leading
+					engineering on GenAI products such as retrieval-augmented chatbots and guardrails.
+					The full story is on my <a href="/cv">CV</a>.
 				</p>
+
+				<h2>Writing</h2>
+				<p>
+					I write occasionally about AI engineering, Python and cloud infrastructure on the <a href="/blog">blog</a>.
+					I have also written or co-authored articles elsewhere:
+				</p>
+				<ul>
+					{EXTERNAL_POSTS.map((post) => (
+						<li>
+							<a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
+							<span class="about-publication"> — {post.publication}</span>
+						</li>
+					))}
+				</ul>
 
 				<h2>Outside work</h2>
 				<p>
@@ -73,8 +90,24 @@ import { SITE_AUTHOR } from '../consts';
 		color: rgb(var(--black));
 	}
 
-	.about-content p {
+	.about-content p,
+	.about-content li {
 		color: rgb(var(--gray-dark));
 		line-height: 1.8;
+	}
+
+	.about-content ul {
+		margin: 0 0 1.25em 0;
+		padding-left: 1.25em;
+		list-style-type: disc;
+	}
+
+	.about-content li {
+		margin-bottom: 0.5em;
+	}
+
+	.about-publication {
+		color: rgb(var(--gray));
+		font-size: 0.9em;
 	}
 </style>

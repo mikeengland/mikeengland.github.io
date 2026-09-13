@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_ROLE, SITE_TITLE } from '../consts';
+import { EXTERNAL_POSTS } from '../data/external-posts';
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -87,6 +88,29 @@ const posts = (await getCollection('blog'))
 					</a>
 				))}
 			</div>
+
+				<!-- Published elsewhere -->
+				<div class="mt-14">
+					<p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-6 m-0">Published Elsewhere</p>
+					<ul class="list-none m-0 p-0 space-y-3">
+						{EXTERNAL_POSTS.map((post) => (
+							<li class="m-0">
+								<a
+									href={post.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group flex items-baseline gap-3 no-underline hover:no-underline"
+								>
+									<span class="text-slate-300 group-hover:text-blue-500 transition-colors duration-150 shrink-0" aria-hidden="true">&nearr;</span>
+									<span class="min-w-0">
+										<span class="block font-semibold text-slate-900 group-hover:text-blue-700 transition-colors duration-150 leading-snug break-words">{post.title}</span>
+										<span class="block text-slate-400 text-sm">{post.publication}</span>
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
 		</main>
 
 		<Footer />

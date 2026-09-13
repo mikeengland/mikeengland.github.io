@@ -1,5 +1,6 @@
 ---
 title: 'The LLM Deployment Dilemma: Third-Party APIs or Self-Hosting?'
+description: 'Cost, model retirements and engineering skill-sets: three things to weigh before choosing between third-party LLM APIs and hosting open-source models yourself.'
 pubDate: 'Apr 08 2024'
 heroImage: '../../assets/self-hosting.webp'
 ---

@@ -1,16 +1,17 @@
 ---
 title: 'How I passed the Certified Kubernetes Application Developer (CKAD) exam'
+description: 'What the CKAD exam and PSI environment are actually like, how I prepared, and the kubectl habits that saved me the most time.'
 pubDate: 'Apr 24 2023'
 heroImage: '../../assets/containers.webp'
 ---
 
-Last week I sat the CKAD exam and managed to pass with a score of 96%. I’ve decided to write about my experience sitting the exam as I found that there is a quite a bit of scare-mongering on various forums and websites around the experience taking it! The aim of this post is to provide a overview of the exam and the testing environment whilst also providing some advice for the best way to approach studying for it.
+Last week I sat the CKAD exam and managed to pass with a score of 96%. I’ve decided to write about my experience sitting the exam as I found that there is quite a bit of scare-mongering on various forums and websites around the experience taking it! The aim of this post is to provide an overview of the exam and the testing environment whilst also providing some advice for the best way to approach studying for it.
 
 ## What is the CKAD exam?
 
 The CKAD exam focuses on using Kubernetes (K8s) from an application developer’s point of view, compared with other exams such as the CKA (Certified Kubernetes Administrator) which is more focused on the administration of Kubernetes clusters. The exam tests you on concepts such as launching and scaling pods, exposing applications via services, creating and storing configuration files and secrets, creating and using persistent volumes and so on. In my opinion, if you are interested in learning how to interact with K8s, maybe just out of interest or because you will be working with it in future, I think this is a worthwhile certification to study for.
 
-What is interesting about his exam compared to other certifications I have taken is that it is a fully practical exam. The exam environment asks you to set up applications on Kubernetes and then automatically checks your environment after the exam ends to check that you have performed the tasks correctly. This means that it is not an easy exam to blag and you really need a good understanding of the relevant K8s objects and CLI to pass the exam.
+What is interesting about this exam compared to other certifications I have taken is that it is a fully practical exam. The exam environment asks you to set up applications on Kubernetes and then automatically checks your environment after the exam ends to check that you have performed the tasks correctly. This means that it is not an easy exam to blag and you really need a good understanding of the relevant K8s objects and CLI to pass the exam.
 
 The exam is 2 hours long and contains between 15–20 tasks. Each task is worth a certain percentage of the total grade, e.g. 4% or 8%. The pass mark for the exam is 66%.
 
@@ -34,7 +35,7 @@ One other thing to mention about my exam experience is that I took the exam on a
 
 I started preparing for the exam by purchasing [Mumshad Mannambeth’s online course on Udemy](https://www.udemy.com/course/certified-kubernetes-application-developer/). The content is clear and it does cover all the necessary topics for the exam. The greatest benefit of this course is the KodeKloud environment that is provided with it, which provides labs for each lecture. In addition, there are a few extra labs and mock tests at the end of the course for further practice.
 
-Once I completed the course, I practiced all of the scenarios provided by killercoda.com. These were quite basic, but helped refresh my memory over certain topics. I additionally watched some YouTube videos to gain an understanding of what sample questions looked like. I found this video from Dan Lister to be a good example of a question you could expect to see in the exam.
+Once I completed the course, I practiced all of the scenarios provided by killercoda.com. These were quite basic, but helped refresh my memory over certain topics. I additionally watched some YouTube videos to gain an understanding of what sample questions looked like. I found [this video from Dan Lister](https://www.youtube.com/watch?v=wHha-Q3XVOg) to be a good example of a question you could expect to see in the exam.
 
 I then went through one of the two killer.sh environments that are bundled as part of the exam purchase. I found these to be slightly harder than the exam (they admit this!), and a very similar environment to the real exam in practice (remote desktop, requirement to ctrl + shift + c for copy, ctrl + shift + v for paste etc). Once you have gone through this exam, you can view the score and solutions. The environment remains active for 36 hours, so you can have multiple attempts at the questions. I do recommend saving one of the killer.sh sessions for the night before the exam for a final practice. Do be aware though that the two killer.sh environments are both identical in terms of questions!
 

@@ -1,0 +1,19 @@
+---
+interface Props {
+	title: string;
+	skills: string[];
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div>
+	<h3 class="text-[0.8em] font-bold uppercase tracking-wider text-slate-500 m-0 mb-2.5">{title}</h3>
+	<div class="flex flex-wrap gap-1.5">
+		{skills.map((skill) => (
+			<span class="inline-block rounded-full bg-blue-50 text-blue-700 text-[0.8em] font-semibold px-3 py-1 print:border print:border-slate-300 print:bg-transparent">
+				{skill}
+			</span>
+		))}
+	</div>
+</div>
