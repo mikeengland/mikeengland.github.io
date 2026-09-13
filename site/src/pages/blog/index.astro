@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { EXTERNAL_POSTS } from '../../data/external-posts';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -23,7 +24,7 @@ const posts = (await getCollection('blog')).sort(
 			<div class="mb-10">
 				<p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">Writing</p>
 				<h1 class="text-4xl font-bold text-slate-900 mb-3">Blog</h1>
-				<p class="text-slate-500 text-lg m-0">Thoughts on software, technology, and ideas.</p>
+				<p class="text-slate-500 text-lg m-0">Notes on AI engineering, Python and cloud infrastructure.</p>
 			</div>
 
 			<!-- Post list -->
@@ -57,6 +58,31 @@ const posts = (await getCollection('blog')).sort(
 					</a>
 				))}
 			</div>
+
+				<!-- Articles published elsewhere -->
+				<div class="mt-14">
+					<p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">Elsewhere</p>
+					<h2 class="text-2xl font-bold text-slate-900 mb-3">Published elsewhere</h2>
+					<p class="text-slate-500 m-0 mb-6">Articles I have written or co-authored for other publications.</p>
+					<div class="space-y-3">
+						{EXTERNAL_POSTS.map((post) => (
+							<a
+								href={post.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="group flex w-full min-w-0 flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-6 bg-white rounded-xl border border-slate-200 border-l-[3px] border-l-slate-100 hover:border-l-blue-500 hover:border-slate-200 hover:shadow-md transition-all duration-200 no-underline hover:no-underline px-6 py-5"
+							>
+								<div class="flex-1 min-w-0">
+									<h3 class="font-bold text-slate-900 text-base sm:text-lg leading-snug mb-1.5 group-hover:text-blue-600 transition-colors duration-150 break-words">
+										{post.title}
+									</h3>
+									<p class="text-slate-400 text-sm leading-relaxed m-0 break-words">{post.publication}</p>
+								</div>
+								<span class="shrink-0 text-slate-300 group-hover:text-blue-500 transition-colors duration-200 text-lg leading-none sm:pt-0.5" aria-hidden="true">&nearr;</span>
+							</a>
+						))}
+					</div>
+				</div>
 		</main>
 		<Footer />
 	</body>

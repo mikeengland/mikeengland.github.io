@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR } from '../consts';
+import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR, SITE_ROLE } from '../consts';
 ---
 
 <!doctype html>
@@ -17,7 +17,7 @@ import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR } from '../consts';
 			<div class="cv-header">
 				<div class="cv-header-text">
 					<h1>{SITE_AUTHOR}</h1>
-					<p class="cv-role">Lead Software Engineer</p>
+					<p class="cv-role">{SITE_ROLE}</p>
 					<div class="cv-contact">
 						{LINKEDIN_URL && <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">LinkedIn</a>}
 						{GITHUB_URL && <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>}
@@ -62,8 +62,8 @@ import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR } from '../consts';
 						</div>
 						<ul>
 							<li>Lead the engineering effort of a new application using GenAI to analyse and provide recommendations for marketing communications, ensuring alignment with regulatory guidelines and NatWest's tone of voice.</li>
-							<li>Led the implementation of a RAG system for a public NatWest GenAI chatbot - now available to millions of customers.</li>
-							<li>Deployed a new solution to automate customer onboarding checks - now live and in use by an Onboarding team.</li>
+							<li>Led the implementation of a RAG system for NatWest's public-facing GenAI chatbot, now available to millions of customers.</li>
+							<li>Delivered a GenAI solution that automates customer onboarding checks, now in production use by the onboarding team.</li>
 							<li>Currently building foundational AI services to support delivery of AI solutions across NatWest.</li>
 							<li>Founding member of the Python language guild and <a href="https://nwg.ai" target="_blank" rel="noopener noreferrer">public engineering blog</a> committee member.</li>
 						</ul>
@@ -115,7 +115,7 @@ import { GITHUB_URL, LINKEDIN_URL, SITE_AUTHOR } from '../consts';
 							<div>
 								<p class="cv-item-title">Engineering Team Lead</p>
 							</div>
-							<span class="cv-item-date">Oct 2019 – Sep  &middot; Berlin/London</span>
+							<span class="cv-item-date">Oct 2019 – Sep 2021 &middot; Berlin/London</span>
 						</div>
 						<ul>
 							<li>Led development of two large internal applications: KAYAK's Performance Marketing platform and in-house Business Intelligence platform.</li>

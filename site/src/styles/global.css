@@ -63,9 +63,10 @@
 		text-decoration: underline;
 	}
 
-	/* Fallback element styles for non-Tailwind pages */
+	/* Fallback element styles for non-Tailwind pages.
+	   No fixed width here: Tailwind pages set their own max-width and a
+	   fixed width would win over it and overflow on small screens. */
 	main {
-		width: 760px;
 		max-width: calc(100% - 2em);
 		margin: auto;
 		padding: 3em 1em;
