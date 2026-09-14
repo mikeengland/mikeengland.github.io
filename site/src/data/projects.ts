@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
 		url: 'https://willigettheshits.com/',
 		domain: 'willigettheshits.com',
 		blurb:
-			'an interactive map of every official FSA food hygiene rating in the UK, refreshed daily, so checking a takeaway takes three seconds instead of a trip through a government search form.',
-		note: 'The domain is deliberately daft, but it is also the actual product requirement: it is the question everyone is really asking when they squint at a hygiene sticker in a window.',
+			'An interactive map of every official FSA food hygiene rating in the UK, refreshed daily.',
+		note: 'The domain name is deliberately daft as an amusing hook. The site serves hundreds of visitors a month.',
 	},
 ];
