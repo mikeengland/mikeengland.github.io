@@ -4,6 +4,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_AUTHOR, SITE_ROLE } from '../consts';
 import { EXTERNAL_POSTS } from '../data/external-posts';
+import { PROJECTS } from '../data/projects';
 ---
 
 <!doctype html>
@@ -45,6 +46,21 @@ import { EXTERNAL_POSTS } from '../data/external-posts';
 						<li>
 							<a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
 							<span class="about-publication"> — {post.publication}</span>
+						</li>
+					))}
+				</ul>
+
+				<h2>Side projects</h2>
+				<p>
+					I also build small things in my own time, usually because I wanted them to exist and nobody
+					else had made one:
+				</p>
+				<ul>
+					{PROJECTS.map((project) => (
+						<li>
+							<a href={project.url} target="_blank" rel="noopener noreferrer">{project.domain}</a>
+							<span class="about-publication"> — {project.blurb}</span>
+							{project.note && <span class="about-note">{project.note}</span>}
 						</li>
 					))}
 				</ul>
@@ -109,5 +125,16 @@ import { EXTERNAL_POSTS } from '../data/external-posts';
 	.about-publication {
 		color: rgb(var(--gray));
 		font-size: 0.9em;
+	}
+
+	.about-note {
+		display: block;
+		margin-top: 0.35em;
+		padding-left: 0.75em;
+		border-left: 2px solid var(--border);
+		color: rgb(var(--gray));
+		font-size: 0.85em;
+		font-style: italic;
+		line-height: 1.6;
 	}
 </style>
