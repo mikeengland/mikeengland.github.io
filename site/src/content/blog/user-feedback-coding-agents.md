@@ -11,7 +11,7 @@ heroImage: ''
 
 This is why we have evals. Since we started building systems with LLM components, it was clear that an eval suite is the only way to be confident that systems continue to operate correctly after a prompt, model or tool change.
 
-During development, we build out eval suites and tune the system until it reaches an acceptable level of performance across a set of chosen metrics. Once the system is launched into production, we observe new inputs we hadn't accounted for. The team then makes small adjustments to the codebase and adds new evals to account for these new scenarios. This is the traditional way of working. Product managers add new work into the backlog, a developer picks up a ticket and makes the change. We have successfully worked this way for decades, but I can't help but feel that the split between end-users and developers adds a lot of latency. Can we shorten it?
+During development, we build out eval suites and tune the system until it reaches an acceptable level of performance across a set of chosen metrics. Once the system is launched into production, we observe new inputs we hadn't accounted for. The team then makes small adjustments to the codebase and adds new evals to account for these new scenarios. This is the traditional way of working. Product managers receive feedback from users, add new work into the backlog, a developer picks up a ticket and makes the change. We have successfully worked this way for decades, but I can't help but feel that the split between end-users and developers adds a lot of latency. Can we shorten it?
 
 ![A traditional feedback workflow](../../assets/feedback_blog/feedback_workflow.png)
 <sup>The traditional feedback -> implementation workflow</sup>
